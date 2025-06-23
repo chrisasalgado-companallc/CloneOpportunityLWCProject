@@ -1,3 +1,9 @@
+# Existing Salesforce Project to GitHub with VS Code and GitHub Desktop
+0. Create a repo in GitHub (web) with the same name as your project's main folder
+1. Initialize Git on the local project within VS Code
+2. Go to Github Desktop File -> Add local repository...
+3. Publish the repo
+
 # Salesforce DX Project: Next Steps
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
