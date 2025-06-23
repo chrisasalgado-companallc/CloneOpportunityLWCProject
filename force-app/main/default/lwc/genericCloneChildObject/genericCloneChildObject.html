@@ -1,0 +1,12 @@
+<template>
+    <lightning-layout vertical-align="start">
+        <lightning-layout-item padding="around-small">
+            <h1>{tableLabel}</h1>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout vertical-align="center">
+        <lightning-layout-item>
+                <lightning-datatable key-field="id" data={childrenData} columns={columns}></lightning-datatable>                
+            </lightning-layout-item>
+    </lightning-layout>
+</template>
