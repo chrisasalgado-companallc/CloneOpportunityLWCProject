@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Clone Opportunity with Products" icon-name="standard:opportunity">
+        <div class="slds-m-around_medium">
+            <h1>Generic Clone Object</h1>
+            <c-generic-clone-object
+                record-id={recordId}
+                object-api-name={objectApiName}
+                object-field-set-api-name={objectFieldSetApiName}
+                onsave={handleSave}
+                onerror={handleError}
+            ></c-generic-clone-object>
+        </div>
+        <div class="slds-m-around_medium">
+            <h1>Generic Clone Child Object</h1>
+            <c-generic-clone-child-object
+                record-id={recordId}                                
+                table-label={childTableLabel}
+                child-object-api-name={childObjectApiName}
+                child-field-set-api-name={childFieldSetApiName}
+                parent-relationship-field={parentRelationshipField}
+                include-exclude-fields-map={includeExcludeFieldsMap}
+                ondone={handleDone}
+                onerror={handleError}
+            ></c-generic-clone-child-object>
+        </div>
+        <div slot="footer">
+            <lightning-button variant="brand" label="Save" onclick={handleSaveButton}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

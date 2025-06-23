@@ -1,0 +1,22 @@
+<template>
+    <!--Edit Form-->
+    <lightning-record-edit-form object-api-name={objectApiName} record-id={recordId} onsubmit={submitHandler}>
+        <lightning-messages></lightning-messages>
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-2 slds-m-right_small">
+                <template for:each={fieldList_leftSection} for:item="field">
+                    <lightning-input-field key={field.keyValue} field-name={field.fieldApiName}></lightning-input-field>
+                </template>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-m-right_small">
+                <template for:each={fieldList_rightSection} for:item="field">
+                    <lightning-input-field key={field.keyValue} field-name={field.fieldApiName}></lightning-input-field>
+                </template>
+            </div>
+        </div>
+        <!--Hidden Button-->
+        <lightning-button variant="base" type="submit" data-id="create_button"></lightning-button>
+    </lightning-record-edit-form>
+    <!--Dummy Insert Form-->
+    <lightning-record-edit-form object-api-name={objectApiName} data-id="dummy_form" onsuccess={successHandler} onerror={errorHandler}></lightning-record-edit-form>
+</template>
